@@ -1,0 +1,23 @@
+{
+  "name": "pump-power-calc",
+  "version": "1.0.0",
+  "description": "Size a centrifugal pump motor from flow, head, and efficiency.",
+  "license": "MIT",
+  "author": "shanguoao2026-web",
+  "engines": {
+    "node": ">=18"
+  },
+  "main": "dist/calc.js",
+  "bin": {
+    "pump-power-calc": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc --pretty false",
+    "test": "npm run build && node --test --test-reporter spec dist/calc.test.js dist/cli.test.js",
+    "start": "node dist/cli.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "typescript": "^5.8.3"
+  }
+}
